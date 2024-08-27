@@ -1,0 +1,124 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation Bar */
+.navbar {
+    margin-bottom: 20px;
+}
+#navbarNav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: #f2f2f3;
+    color: white;
+    display: flex;
+    z-index: 1000;
+}
+
+/* Hero Section */
+.jumbotron {
+    padding: 50px 0;
+}
+
+.jumbotron h1 {
+    font-size: 5rem;
+    font-weight: bold;
+    color: rgb(1, 84, 61);
+}
+.jumbotron img{
+    border-radius: 40px;
+}
+
+.jumbotron p {
+    font-size: 1.4rem;
+    color:black
+}
+
+.jumbotron .btn {
+    background-color: #28a745;
+    border: none;
+    font-size: 1rem;
+}
+
+/* About Section */
+#about {
+    padding: 50px 0;
+}
+
+#about h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Evaluation Section */
+#evaluation {
+    padding: 50px 0;
+}
+
+#evaluation h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#evaluation p {
+    font-size: 1rem;
+    margin-bottom: 30px;
+}
+
+#evaluation .form-group {
+    margin-bottom: 20px;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px 0;
+}
+
+#contact h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+.container-fluid{
+    background-color: rgb(24, 120, 88);
+    border-radius: 20px;
+}
+.container-fluid a{
+    color: aliceblue;
+    font-size: 25px;
+    text-align: center;
+    margin-left: 50%;   
+}

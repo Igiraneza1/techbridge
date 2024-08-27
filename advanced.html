@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beginner Quiz: Email and Microsoft Office</title>
+</head>
+<body>
+    <h1>Beginner Quiz: Email and Microsoft Office</h1>
+    <form id="quizForm">
+        <div>
+            <p>1. What do you need to do before you can send an email?</p>
+            <input type="radio" name="q1" value="a"> Write the email in a Word document<br>
+            <input type="radio" name="q1" value="b"> Create an email account<br>
+            <input type="radio" name="q1" value="c"> Print the email<br>
+        </div>
+
+        <div>
+            <p>2. Which part of an email contains the recipient's email address?</p>
+            <input type="radio" name="q2" value="a"> Subject line<br>
+            <input type="radio" name="q2" value="b"> Body<br>
+            <input type="radio" name="q2" value="c"> To field<br>
+        </div>
+
+        <div>
+            <p>3. What is the purpose of the "Subject" line in an email?</p>
+            <input type="radio" name="q3" value="a"> To attach files to the email<br>
+            <input type="radio" name="q3" value="b"> To summarize the main topic of the email<br>
+            <input type="radio" name="q3" value="c"> To list the recipients of the email<br>
+        </div>
+
+        <div>
+            <p>4. Which button would you click to send a reply to an email?</p>
+            <input type="radio" name="q4" value="a"> Forward<br>
+            <input type="radio" name="q4" value="b"> Delete<br>
+            <input type="radio" name="q4" value="c"> Reply<br>
+        </div>
+
+        <div>
+            <p>5. What does the "CC" field in an email stand for?</p>
+            <input type="radio" name="q5" value="a"> Copy Center<br>
+            <input type="radio" name="q5" value="b"> Carbon Copy<br>
+            <input type="radio" name="q5" value="c"> Contact Copy<br>
+        </div>
+
+        <div>
+            <p>6. Which Microsoft Office application would you use to create a letter?</p>
+            <input type="radio" name="q6" value="a"> Microsoft Word<br>
+            <input type="radio" name="q6" value="b"> Microsoft Excel<br>
+            <input type="radio" name="q6" value="c"> Microsoft PowerPoint<br>
+        </div>
+
+        <div>
+            <p>7. What is the purpose of the "Save" button in Microsoft Office applications?</p>
+            <input type="radio" name="q7" value="a"> To print the document<br>
+            <input type="radio" name="q7" value="b"> To save the document to your computer<br>
+            <input type="radio" name="q7" value="c"> To close the application<br>
+        </div>
+
+        <div>
+            <p>8. In Microsoft Word, how do you make text bold?</p>
+            <input type="radio" name="q8" value="a"> Select the text and press "B" on your keyboard<br>
+            <input type="radio" name="q8" value="b"> Highlight the text and click the "Bold" button (B) in the toolbar<br>
+            <input type="radio" name="q8" value="c"> Type the text in all capital letters<br>
+        </div>
+
+        <div>
+            <p>9. Which Microsoft Office application would you use to create a spreadsheet?</p>
+            <input type="radio" name="q9" value="a"> Microsoft Word<br>
+            <input type="radio" name="q9" value="b"> Microsoft PowerPoint<br>
+            <input type="radio" name="q9" value="c"> Microsoft Excel<br>
+        </div>
+
+        <div>
+            <p>10. What is a "slide" in Microsoft PowerPoint?</p>
+            <input type="radio" name="q10" value="a"> A section of a document in Word<br>
+            <input type="radio" name="q10" value="b"> A page in a PowerPoint presentation<br>
+            <input type="radio" name="q10" value="c"> A type of formula in Excel<br>
+        </div>
+
+        <button type="button" onclick="checkAnswers()">Submit</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+        function checkAnswers() {
+            const correctAnswers = {
+                q1: 'b',
+                q2: 'c',
+                q3: 'b',
+                q4: 'c',
+                q5: 'b',
+                q6: 'a',
+                q7: 'b',
+                q8: 'b',
+                q9: 'c',
+                q10: 'b'
+            };
+
+            let score = 0;
+            const form = document.getElementById('quizForm');
+            const formData = new FormData(form);
+
+            for (const [key, value] of formData.entries()) {
+                if (value === correctAnswers[key]) {
+                    score++;
+                }
+            }
+
+            const totalQuestions = Object.keys(correctAnswers).length;
+            document.getElementById('result').innerText = `You scored ${score} out of ${totalQuestions}.`;
+        }
+    </script>
+</body>
+</html>
